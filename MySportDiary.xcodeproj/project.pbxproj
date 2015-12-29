@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7775E8561C32DA38009399D6 /* MySportUiNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775E8551C32DA38009399D6 /* MySportUiNavigationController.swift */; };
+		7775E8581C32DDCE009399D6 /* MySportEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775E8571C32DDCE009399D6 /* MySportEntryTableViewController.swift */; };
 		777890F31C2844FC00306CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777890F21C2844FC00306CC1 /* AppDelegate.swift */; };
 		777890F51C2844FC00306CC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777890F41C2844FC00306CC1 /* ViewController.swift */; };
 		777890F81C2844FC00306CC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777890F61C2844FC00306CC1 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7775E8551C32DA38009399D6 /* MySportUiNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportUiNavigationController.swift; sourceTree = "<group>"; };
+		7775E8571C32DDCE009399D6 /* MySportEntryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportEntryTableViewController.swift; sourceTree = "<group>"; };
 		777890EF1C2844FC00306CC1 /* MySportDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySportDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		777890F21C2844FC00306CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		777890F41C2844FC00306CC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		777890F11C2844FC00306CC1 /* MySportDiary */ = {
 			isa = PBXGroup;
 			children = (
+				7775E8571C32DDCE009399D6 /* MySportEntryTableViewController.swift */,
+				7775E8551C32DA38009399D6 /* MySportUiNavigationController.swift */,
 				777890F21C2844FC00306CC1 /* AppDelegate.swift */,
 				777890F41C2844FC00306CC1 /* ViewController.swift */,
 				777890F61C2844FC00306CC1 /* Main.storyboard */,
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7775E8561C32DA38009399D6 /* MySportUiNavigationController.swift in Sources */,
 				777890F51C2844FC00306CC1 /* ViewController.swift in Sources */,
 				777890F31C2844FC00306CC1 /* AppDelegate.swift in Sources */,
+				7775E8581C32DDCE009399D6 /* MySportEntryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +293,7 @@
 				777891031C2844FC00306CC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
