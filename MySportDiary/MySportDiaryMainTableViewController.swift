@@ -1,37 +1,21 @@
 //
-//  MySportEntryTableViewController.swift
+//  MySportDiaryMainTableViewController.swift
 //  MySportDiary
 //
-//  Created by Koulutus on 29/12/15.
+//  Created by Koulutus on 30/12/15.
 //  Copyright © 2015 Koulutus. All rights reserved.
 //
 
 import UIKit
 
+class MySportDiaryMainTableViewController: UITableViewController {
 
-class MySportEntryTableViewController: UITableViewController {
-    
-    
-    @IBAction func SportDiaryCancelButton(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: {})
+    @IBAction func MySportDiaryFileButton(sender: AnyObject) {
     }
-
-    @IBAction func SportDiarySaveButton(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: {})
-    }
-    
-    @IBOutlet weak var MySportDiaryDateText: UITextField!
-    
-    
-    @IBOutlet weak var MySportDiarySportText: UITextField!
-    
-    @IBOutlet weak var MySportDiaryDurationText: UITextField!
-    
-    @IBOutlet weak var MySportDiaryPlaceText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -48,12 +32,12 @@ class MySportEntryTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1 // hard coded, check this
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4 // hard coded, check this
+        return 0
     }
 
     /*
