@@ -15,6 +15,7 @@ class MySportFileTableViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion: {})
     }
     
+    // Add here functionality now just close dialog
     @IBAction func MySportFileLoadButton(sender: UIButton) {
         // exit dialog
         dismissViewControllerAnimated(true, completion: {})

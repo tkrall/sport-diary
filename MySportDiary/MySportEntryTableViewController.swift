@@ -20,8 +20,8 @@ class MySportEntryTableViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion: {})
     }
     
+    // Text inputs
     @IBOutlet weak var MySportDiaryDateText: UITextField!
-    
     
     @IBOutlet weak var MySportDiarySportText: UITextField!
     
