@@ -15,6 +15,20 @@ class MySportFileTableViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion: {})
     }
     
+    @IBAction func MySportFileLoadButton(sender: UIButton) {
+        // exit dialog
+        dismissViewControllerAnimated(true, completion: {})
+    }
+    
+    @IBAction func MySportFileExportButton(sender: UIButton) {
+        // exit dialog
+        dismissViewControllerAnimated(true, completion: {})
+    }
+    
+    @IBOutlet weak var MySportFileLoadText: UITextField!
+    
+    @IBOutlet weak var MySportFileExportText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,12 +48,12 @@ class MySportFileTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 2
     }
 
     /*
