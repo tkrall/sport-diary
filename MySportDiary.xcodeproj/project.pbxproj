@@ -15,6 +15,7 @@
 		777890FA1C2844FC00306CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777890F91C2844FC00306CC1 /* Assets.xcassets */; };
 		777890FD1C2844FC00306CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777890FB1C2844FC00306CC1 /* LaunchScreen.storyboard */; };
 		777EC1E71C39223000D28920 /* MySportFileUiNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777EC1E61C39223000D28920 /* MySportFileUiNavigationController.swift */; };
+		777EC1E91C3926F000D28920 /* MySportFileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777EC1E81C3926F000D28920 /* MySportFileTableViewController.swift */; };
 		77AFB8E61C33BBB1007EFFFF /* MySportDiaryMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AFB8E51C33BBB1007EFFFF /* MySportDiaryMainTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		777890FC1C2844FC00306CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		777890FE1C2844FC00306CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		777EC1E61C39223000D28920 /* MySportFileUiNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportFileUiNavigationController.swift; sourceTree = "<group>"; };
+		777EC1E81C3926F000D28920 /* MySportFileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportFileTableViewController.swift; sourceTree = "<group>"; };
 		77AFB8E51C33BBB1007EFFFF /* MySportDiaryMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportDiaryMainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 			children = (
 				777EC1E61C39223000D28920 /* MySportFileUiNavigationController.swift */,
 				7775E8571C32DDCE009399D6 /* MySportEntryTableViewController.swift */,
+				777EC1E81C3926F000D28920 /* MySportFileTableViewController.swift */,
 				7775E8551C32DA38009399D6 /* MySportUiNavigationController.swift */,
 				77AFB8E51C33BBB1007EFFFF /* MySportDiaryMainTableViewController.swift */,
 				777890F21C2844FC00306CC1 /* AppDelegate.swift */,
@@ -151,6 +154,7 @@
 				7775E8561C32DA38009399D6 /* MySportUiNavigationController.swift in Sources */,
 				777890F51C2844FC00306CC1 /* ViewController.swift in Sources */,
 				777EC1E71C39223000D28920 /* MySportFileUiNavigationController.swift in Sources */,
+				777EC1E91C3926F000D28920 /* MySportFileTableViewController.swift in Sources */,
 				77AFB8E61C33BBB1007EFFFF /* MySportDiaryMainTableViewController.swift in Sources */,
 				777890F31C2844FC00306CC1 /* AppDelegate.swift in Sources */,
 				7775E8581C32DDCE009399D6 /* MySportEntryTableViewController.swift in Sources */,

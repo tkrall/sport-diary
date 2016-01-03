@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="50" y="32"/>
         </scene>
-        <!--Root View Controller-->
+        <!--File Operations-->
         <scene sceneID="r8C-xl-UTo">
             <objects>
-                <tableViewController id="PMI-wJ-6Pa" sceneMemberID="viewController">
+                <tableViewController title="File Operations" id="PMI-wJ-6Pa" customClass="MySportFileTableViewController" customModule="MySportDiary" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="U4L-dZ-lDa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,13 @@
                             <outlet property="delegate" destination="PMI-wJ-6Pa" id="Kgm-Jv-uwP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="cfO-C1-7LJ"/>
+                    <navigationItem key="navigationItem" title="File Operations" id="cfO-C1-7LJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DYr-Gu-WgI">
+                            <connections>
+                                <action selector="MySportFileCancelButton:" destination="PMI-wJ-6Pa" id="HsT-5y-Szh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1V-tT-QJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
