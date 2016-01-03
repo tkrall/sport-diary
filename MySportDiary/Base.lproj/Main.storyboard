@@ -46,6 +46,7 @@
                         <barButtonItem key="leftBarButtonItem" title="File" id="bCy-tI-LAf" userLabel="File">
                             <connections>
                                 <action selector="MySportDiaryFileButton:" destination="7Ug-H0-ep4" id="5ep-fR-7Z6"/>
+                                <segue destination="BHc-8o-xIh" kind="presentation" id="f8s-o0-djc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="e8Q-nY-7RF">
@@ -222,6 +223,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Try-U7-RtK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="50" y="32"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="r8C-xl-UTo">
+            <objects>
+                <tableViewController id="PMI-wJ-6Pa" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="U4L-dZ-lDa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="x4U-qi-gDY">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x4U-qi-gDY" id="OHt-2P-7gR">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PMI-wJ-6Pa" id="fpu-1J-r7z"/>
+                            <outlet property="delegate" destination="PMI-wJ-6Pa" id="Kgm-Jv-uwP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="cfO-C1-7LJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1V-tT-QJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="696"/>
+        </scene>
+        <!--My Sport File Ui Navigation Controller-->
+        <scene sceneID="Btv-lx-8Jz">
+            <objects>
+                <navigationController id="BHc-8o-xIh" customClass="MySportFileUiNavigationController" customModule="MySportDiary" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yJX-kn-ChB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PMI-wJ-6Pa" kind="relationship" relationship="rootViewController" id="r0X-Y3-fky"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PyD-BT-X4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50" y="696"/>
         </scene>
     </scenes>
 </document>

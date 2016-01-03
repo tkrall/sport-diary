@@ -10,8 +10,6 @@ import UIKit
 
 class MySportDiaryMainTableViewController: UITableViewController {
 
-    @IBAction func MySportDiaryFileButton(sender: AnyObject) {
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
