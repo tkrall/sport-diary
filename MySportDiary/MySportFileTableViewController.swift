@@ -38,8 +38,32 @@ class MySportFileTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let dummy = UITapGestureRecognizer(target: self, action: "MySportDiaryClearLoadDialog" )
+        dummy.numberOfTapsRequired = 1
+        self.MySportFileLoadText.addGestureRecognizer(dummy)
+        
+        let dummy2 = UITapGestureRecognizer(target: self, action: "MySportDiaryClearExportDialog" )
+        dummy2.numberOfTapsRequired = 1
+        self.MySportFileExportText.addGestureRecognizer(dummy2)
+        
+        // Clears the help text when user wants to edit
+        MySportFileLoadText.clearsOnBeginEditing = true
+        MySportFileExportText.clearsOnBeginEditing = true
     }
 
+    func MySportDiaryClearLoadDialog()
+    {
+        // if tapped, clear the dialog and let user to type file name
+        MySportFileLoadText.text = ""
+    }
+    
+    func MySportDiaryClearExportDialog()
+    {
+        // if tapped, clear the dialog and let user to type file name
+        MySportFileExportText.text = ""
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

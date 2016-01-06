@@ -250,8 +250,12 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="File to load" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mSU-Gk-hnb">
                                                     <rect key="frame" x="25" y="49" width="241" height="30"/>
+                                                    <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="SGj-0C-pGv" appends="YES" id="jcb-Ki-ufB"/>
+                                                    </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Crf-K6-gkA">
                                                     <rect key="frame" x="333" y="48" width="46" height="30"/>
@@ -262,6 +266,7 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="136" id="5f5-7o-iSb">
                                         <rect key="frame" x="0.0" y="192" width="600" height="136"/>
@@ -278,8 +283,12 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="File to export" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V8L-0J-Wob">
                                                     <rect key="frame" x="24" y="58" width="245" height="30"/>
+                                                    <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="wpP-85-uKe" appends="YES" id="osT-xL-Pg4"/>
+                                                    </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC4-sL-eWY">
                                                     <rect key="frame" x="338" y="58" width="46" height="30"/>
@@ -290,6 +299,7 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -312,6 +322,8 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1V-tT-QJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wpP-85-uKe"/>
+                <tapGestureRecognizer id="SGj-0C-pGv"/>
             </objects>
             <point key="canvasLocation" x="870" y="696"/>
         </scene>
