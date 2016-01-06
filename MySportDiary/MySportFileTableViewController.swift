@@ -15,15 +15,48 @@ class MySportFileTableViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion: {})
     }
     
-    // Add here functionality now just close dialog
+    // Load file button handler
     @IBAction func MySportFileLoadButton(sender: UIButton) {
-        // exit dialog
-        dismissViewControllerAnimated(true, completion: {})
+        // Check if the text field is empty
+        if MySportFileLoadText.text == "" {
+            let message = "Please give file name"
+            let alertController = UIAlertController(title: "File name missing",
+                message: message, preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default,
+                handler: nil)
+            alertController.addAction(okAction)
+            
+            presentViewController(alertController, animated: true,
+                completion: nil)
+        }
+        else
+        {
+            // Open file and load data
+            // exit dialog
+            dismissViewControllerAnimated(true, completion: {})
+        }
+        
     }
     
     @IBAction func MySportFileExportButton(sender: UIButton) {
-        // exit dialog
-        dismissViewControllerAnimated(true, completion: {})
+        
+        if MySportFileExportText.text == ""
+        {
+            let message = "Please give file name"
+            let alertController = UIAlertController(title: "File name missing",
+                message: message, preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default,
+                handler: nil)
+            alertController.addAction(okAction)
+            
+            presentViewController(alertController, animated: true,
+                completion: nil)
+        }
+        else
+        {
+            // exit dialog
+            dismissViewControllerAnimated(true, completion: {})
+        }
     }
     
     @IBOutlet weak var MySportFileLoadText: UITextField!
