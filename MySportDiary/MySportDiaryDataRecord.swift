@@ -12,7 +12,7 @@ struct MySportDiaryDataRecord {
     
     var mySportDiaryDate = String()
     var mySportDiarySport = String()
-    var mySportDiaryDuration : Int64
+    var mySportDiaryDuration = String()
     var mySportDiaryPlace = String()
     
 }

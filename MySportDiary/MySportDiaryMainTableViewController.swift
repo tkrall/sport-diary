@@ -8,9 +8,13 @@
 
 import UIKit
 
-class MySportDiaryMainTableViewController: UITableViewController {
+let reuseIdentifier = "MySportDiaryDataCell"
 
-    var mySportRecordsArray = [MySportDiaryDataRecord]()
+var mySportRecordsArray = [MySportDiaryDataRecord]()
+
+
+class MySportDiaryMainTableViewController: UITableViewController {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,10 @@ class MySportDiaryMainTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //let data = MySportDiaryDataRecord(mySportDiaryDate: "Test",mySportDiarySport: "Test",mySportDiaryDuration: "Test",mySportDiaryPlace: "Test")
+        //mySportRecordsArray.append(data)
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,20 +42,33 @@ class MySportDiaryMainTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return mySportRecordsArray.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        //let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MySportDiaryDataCell
 
         // Configure the cell...
-
+        //cell.textLabel?.text = mySportRecordsArray[(indexPath.row)].mySportDiaryDate
+        
+        let cell = UITableViewCell()
+        let label = UILabel(frame: CGRect(x:0, y:0, width:200, height:50))
+        label.text = mySportRecordsArray[(indexPath.row)].mySportDiaryDate
+        cell.addSubview(label)
+        let label2 = UILabel(frame: CGRect(x:200, y:0, width:200, height:50))
+        label2.text = mySportRecordsArray[(indexPath.row)].mySportDiarySport
+        cell.addSubview(label2)
+        
+        
         return cell
     }
-    */
 
+
+    override func tableView(tableView: (UITableView!), heightForHeaderInSection section: Int) -> CGFloat {
+        return 35
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

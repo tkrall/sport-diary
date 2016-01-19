@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		773446421C4E66CC006199E9 /* MySportDiaryDataRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773446411C4E66CC006199E9 /* MySportDiaryDataRecord.swift */; };
+		773446441C4E6F96006199E9 /* MySportDiaryDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773446431C4E6F96006199E9 /* MySportDiaryDataCell.swift */; };
 		7775E8561C32DA38009399D6 /* MySportUiNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775E8551C32DA38009399D6 /* MySportUiNavigationController.swift */; };
 		7775E8581C32DDCE009399D6 /* MySportEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775E8571C32DDCE009399D6 /* MySportEntryTableViewController.swift */; };
 		777890F31C2844FC00306CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777890F21C2844FC00306CC1 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		773446411C4E66CC006199E9 /* MySportDiaryDataRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportDiaryDataRecord.swift; sourceTree = "<group>"; };
+		773446431C4E6F96006199E9 /* MySportDiaryDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportDiaryDataCell.swift; sourceTree = "<group>"; };
 		7775E8551C32DA38009399D6 /* MySportUiNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportUiNavigationController.swift; sourceTree = "<group>"; };
 		7775E8571C32DDCE009399D6 /* MySportEntryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportEntryTableViewController.swift; sourceTree = "<group>"; };
 		777890EF1C2844FC00306CC1 /* MySportDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySportDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 				777890F21C2844FC00306CC1 /* AppDelegate.swift */,
 				777890F41C2844FC00306CC1 /* ViewController.swift */,
 				777890F61C2844FC00306CC1 /* Main.storyboard */,
+				773446431C4E6F96006199E9 /* MySportDiaryDataCell.swift */,
 				777890F91C2844FC00306CC1 /* Assets.xcassets */,
 				777890FB1C2844FC00306CC1 /* LaunchScreen.storyboard */,
 				777890FE1C2844FC00306CC1 /* Info.plist */,
@@ -160,6 +163,7 @@
 				777EC1E91C3926F000D28920 /* MySportFileTableViewController.swift in Sources */,
 				77AFB8E61C33BBB1007EFFFF /* MySportDiaryMainTableViewController.swift in Sources */,
 				777890F31C2844FC00306CC1 /* AppDelegate.swift in Sources */,
+				773446441C4E6F96006199E9 /* MySportDiaryDataCell.swift in Sources */,
 				7775E8581C32DDCE009399D6 /* MySportEntryTableViewController.swift in Sources */,
 				773446421C4E66CC006199E9 /* MySportDiaryDataRecord.swift in Sources */,
 			);

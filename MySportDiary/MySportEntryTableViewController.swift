@@ -17,7 +17,13 @@ class MySportEntryTableViewController: UITableViewController {
     }
 
     @IBAction func SportDiarySaveButton(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: {})
+        
+        let data = MySportDiaryDataRecord(mySportDiaryDate: MySportDiaryDateText.text!, mySportDiarySport: MySportDiarySportText.text!, mySportDiaryDuration: MySportDiaryDurationText.text!, mySportDiaryPlace: MySportDiaryDurationText.text! )
+        
+        mySportRecordsArray.append(data)
+        tableView.reloadData()
+        
+        dismissViewControllerAnimated(true, completion: { self.tableView.reloadInputViews() })
     }
     
     // Text inputs
