@@ -26,16 +26,19 @@ class MySportFileTableViewController: UITableViewController {
                 handler: nil)
             alertController.addAction(okAction)
             
-            presentViewController(alertController, animated: true,
+            self.presentViewController(alertController, animated: true,
                 completion: nil)
         }
         else
         {
             // Open file and load data
+            
             // exit dialog
             dismissViewControllerAnimated(true, completion: {})
         }
-        
+        // NSCoder
+        // NSKeyedUnarchiver
+        // NSDate
     }
     
     @IBAction func MySportFileExportButton(sender: UIButton) {
@@ -49,7 +52,7 @@ class MySportFileTableViewController: UITableViewController {
                 handler: nil)
             alertController.addAction(okAction)
             
-            presentViewController(alertController, animated: true,
+            self.presentViewController(alertController, animated: true,
                 completion: nil)
         }
         else

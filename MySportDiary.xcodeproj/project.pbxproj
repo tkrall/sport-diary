@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		773446421C4E66CC006199E9 /* MySportDiaryDataRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773446411C4E66CC006199E9 /* MySportDiaryDataRecord.swift */; };
 		7775E8561C32DA38009399D6 /* MySportUiNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775E8551C32DA38009399D6 /* MySportUiNavigationController.swift */; };
 		7775E8581C32DDCE009399D6 /* MySportEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775E8571C32DDCE009399D6 /* MySportEntryTableViewController.swift */; };
 		777890F31C2844FC00306CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777890F21C2844FC00306CC1 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		773446411C4E66CC006199E9 /* MySportDiaryDataRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportDiaryDataRecord.swift; sourceTree = "<group>"; };
 		7775E8551C32DA38009399D6 /* MySportUiNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportUiNavigationController.swift; sourceTree = "<group>"; };
 		7775E8571C32DDCE009399D6 /* MySportEntryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySportEntryTableViewController.swift; sourceTree = "<group>"; };
 		777890EF1C2844FC00306CC1 /* MySportDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySportDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 				777EC1E61C39223000D28920 /* MySportFileUiNavigationController.swift */,
 				7775E8571C32DDCE009399D6 /* MySportEntryTableViewController.swift */,
 				777EC1E81C3926F000D28920 /* MySportFileTableViewController.swift */,
+				773446411C4E66CC006199E9 /* MySportDiaryDataRecord.swift */,
 				7775E8551C32DA38009399D6 /* MySportUiNavigationController.swift */,
 				77AFB8E51C33BBB1007EFFFF /* MySportDiaryMainTableViewController.swift */,
 				777890F21C2844FC00306CC1 /* AppDelegate.swift */,
@@ -158,6 +161,7 @@
 				77AFB8E61C33BBB1007EFFFF /* MySportDiaryMainTableViewController.swift in Sources */,
 				777890F31C2844FC00306CC1 /* AppDelegate.swift in Sources */,
 				7775E8581C32DDCE009399D6 /* MySportEntryTableViewController.swift in Sources */,
+				773446421C4E66CC006199E9 /* MySportDiaryDataRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
