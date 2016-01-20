@@ -14,5 +14,24 @@ struct MySportDiaryDataRecord {
     var mySportDiarySport = String()
     var mySportDiaryDuration = String()
     var mySportDiaryPlace = String()
+}
+
+extension MySportDiaryDataRecord {
+    
+    static func MySportDiaryDataRecordOpenFileForSave()
+    {
+        print("MySportDiaryDataRecordOpenFileForSave called")
+    }
+
+    static func MySportDiaryDataRecordCloseFile()
+    {
+        print("MySportDiaryDataRecordCloseFile called")
+    }
+    
+    static func MySportDiaryDataRecordSaveData(datarecord : MySportDiaryDataRecord)
+    {
+        print("MySportDiaryDataRecordSaveData called")
+    }
+
     
 }
