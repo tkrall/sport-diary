@@ -21,9 +21,12 @@ class MySportEntryTableViewController: UITableViewController {
         let data = MySportDiaryDataRecord(mySportDiaryDate: MySportDiaryDateText.text!, mySportDiarySport: MySportDiarySportText.text!, mySportDiaryDuration: MySportDiaryDurationText.text!, mySportDiaryPlace: MySportDiaryDurationText.text! )
         
         mySportRecordsArray.append(data)
-        tableView.reloadData()
         
-        dismissViewControllerAnimated(true, completion: { self.tableView.reloadInputViews() })
+        dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData()
+        }
+        
+        dismissViewControllerAnimated(true, completion: {})
     }
     
     // Text inputs

@@ -35,6 +35,12 @@ class MySportDiaryMainTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // This function will finally update the view!
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+        self.reloadInputViews()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
