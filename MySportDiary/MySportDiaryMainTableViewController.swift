@@ -27,10 +27,7 @@ class MySportDiaryMainTableViewController: UITableViewController {
         
         //let data = MySportDiaryDataRecord(mySportDiaryDate: "Test",mySportDiarySport: "Test",mySportDiaryDuration: "Test",mySportDiaryPlace: "Test")
         //mySportRecordsArray.append(data)
-        
-        // Open file for save
-        MySportDiaryDataRecord.MySportDiaryDataRecordOpenFileForSave()
-        
+
     
     }
 
