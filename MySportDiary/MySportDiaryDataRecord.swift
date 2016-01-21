@@ -62,12 +62,8 @@ extension MySportDiaryDataRecord {
         NSKeyedArchiver.archiveRootObject(datarecord, toFile: myFilePosition)
     }
 
-}
-
-/*
-
-    @IBAction func LoadAllAction(sender: UIButton) {
-        
+    static func MySportDiaryDataRecordLoadAll()
+    {
         // Use default file manager
         let myFileManager = NSFileManager.defaultManager()
         
@@ -78,19 +74,26 @@ extension MySportDiaryDataRecord {
         // Add file name
         let myDirectoryString = myFileDirectory[0] as String
         
-        let myFilePosition = myDirectoryString.stringByAppendingString("myTest.text")
+        let myFilePosition = myDirectoryString.stringByAppendingString(MySportRecordFilename)
         
-        
-        // remember to check that there is a correct file to load from
         if myFileManager.fileExistsAtPath(myFilePosition)
         {
             // file exists open it and read
-            let receivedData = NSKeyedUnarchiver.unarchiveObjectWithFile(myFilePosition) as! MyData
-            FirstNameField.text = receivedData.MyFamilyName
-            FamilyNameField.text = receivedData.MyFirstName
+            let receivedSportData = NSKeyedUnarchiver.unarchiveObjectWithFile(myFilePosition) as! [MySportDiaryDataRecord]
             
+            // Restore record to global variable. Ensure that empty record is not copied
+            if receivedSportData.count > 0
+            {
+            mySportRecordsArray = receivedSportData
+            }
+            else
+            {
+                print("MySportDiaryDataRecordLoadAll: No records")
+            }
+        }
+        else
+        {
+            print("MySportDiaryDataRecordLoadAll: File not found")
         }
     }
-
-   */
-
+}

@@ -27,6 +27,9 @@ class MySportDiaryMainTableViewController: UITableViewController {
         
         //let data = MySportDiaryDataRecord(mySportDiaryDate: "Test",mySportDiarySport: "Test",mySportDiaryDuration: "Test",mySportDiaryPlace: "Test")
         //mySportRecordsArray.append(data)
+        
+        // Load existing records if present
+        MySportDiaryDataRecord.MySportDiaryDataRecordLoadAll()
 
     
     }
