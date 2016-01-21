@@ -13,4 +13,5 @@ class MySportDiaryDataCell: UITableViewCell {
     @IBOutlet weak var MyDateDataLabel: UILabel!
     
     @IBOutlet weak var MySportDataLabel: UILabel!
+    
 }

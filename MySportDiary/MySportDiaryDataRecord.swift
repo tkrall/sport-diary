@@ -74,6 +74,7 @@ extension MySportDiaryDataRecord {
         // Add file name
         let myDirectoryString = myFileDirectory[0] as String
         
+        // Add file name to path
         let myFilePosition = myDirectoryString.stringByAppendingString(MySportRecordFilename)
         
         if myFileManager.fileExistsAtPath(myFilePosition)
