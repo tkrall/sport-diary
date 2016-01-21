@@ -33,6 +33,16 @@ class MySportFileTableViewController: UITableViewController {
         {
             // Open file and load data
             
+            // Set new filename to global variable
+            MySportRecordFilename = MySportFileLoadText.text!
+            // Load actual data
+            MySportDiaryDataRecord.MySportDiaryDataRecordLoadAll()
+            
+            // Refresh Table view elements
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData()
+            }
+            
             // exit dialog
             dismissViewControllerAnimated(true, completion: {})
         }

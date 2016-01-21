@@ -23,8 +23,9 @@ class MySportEntryTableViewController: UITableViewController {
         mySportRecordsArray.append(data)
         
         // Store data
-        MySportDiaryDataRecord.MySportDiaryDataRecordSaveData(data)
+        MySportDiaryDataRecord.MySportDiaryDataRecordSaveData(mySportRecordsArray)
         
+        // Make sure that Table view elements are updated
         dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
         }

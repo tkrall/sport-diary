@@ -8,7 +8,7 @@
 
 import UIKit
 
-private var MySportRecordFilename = "mysportrecord.txt"
+var MySportRecordFilename = "mysportrecord.txt"
 
 class MySportDiaryDataRecord : NSObject, NSCoding {
     
@@ -22,6 +22,7 @@ class MySportDiaryDataRecord : NSObject, NSCoding {
         self.mySportDiarySport = mySportDiarySport
         self.mySportDiaryDuration = mySportDiaryDuration
         self.mySportDiaryPlace = mySportDiaryPlace
+        super.init()
         }
     
     override init() {
@@ -31,11 +32,11 @@ class MySportDiaryDataRecord : NSObject, NSCoding {
 
     // NSCoding decode/encode functions for data element
     required convenience init?(coder aDecoder: NSCoder) {
-        self.init()
-        self.mySportDiaryDate = aDecoder.decodeObjectForKey("mySportDiaryDate") as! String
-        self.mySportDiarySport = aDecoder.decodeObjectForKey("mySportDiarySport") as! String
-        self.mySportDiaryDuration = aDecoder.decodeObjectForKey("mySportDiaryDuration") as! String
-        self.mySportDiaryPlace = aDecoder.decodeObjectForKey("mySportDiaryPlace") as! String
+        let decodedmySportDiaryDate = aDecoder.decodeObjectForKey("mySportDiaryDate") as! String
+        let decodedmySportDiarySport = aDecoder.decodeObjectForKey("mySportDiarySport") as! String
+        let decodedmySportDiaryDuration = aDecoder.decodeObjectForKey("mySportDiaryDuration") as! String
+        let decodedmySportDiaryPlace = aDecoder.decodeObjectForKey("mySportDiaryPlace") as! String
+        self.init(mySportDiaryDate: decodedmySportDiaryDate, mySportDiarySport: decodedmySportDiarySport, mySportDiaryDuration: decodedmySportDiaryDuration, mySportDiaryPlace: decodedmySportDiaryPlace)
     }
     
     func encodeWithCoder(coder: NSCoder) {
@@ -49,7 +50,7 @@ class MySportDiaryDataRecord : NSObject, NSCoding {
 
 extension MySportDiaryDataRecord {
     
-    static func MySportDiaryDataRecordSaveData(datarecord : MySportDiaryDataRecord)
+    static func MySportDiaryDataRecordSaveData(datarecords : [MySportDiaryDataRecord])
     {
         print("MySportDiaryDataRecordSaveData called")
         
@@ -59,7 +60,11 @@ extension MySportDiaryDataRecord {
         let myDirectoryString = myFileDirectory[0] as NSString
         let myFilePosition = myDirectoryString.stringByAppendingPathComponent(MySportRecordFilename)
         
-        NSKeyedArchiver.archiveRootObject(datarecord, toFile: myFilePosition)
+        NSKeyedArchiver.archiveRootObject(datarecords, toFile: myFilePosition)
+        
+        //NSUserDefaults.standardUserDefaults().setObject(dataElements, forKey: "MySportRecordsInUserDefaults")
+        
+        //NSUserDefaults.standardUserDefaults().synchronize()
     }
 
     static func MySportDiaryDataRecordLoadAll()
@@ -72,7 +77,9 @@ extension MySportDiaryDataRecord {
         let myFileDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         
         // Add file name
-        let myDirectoryString = myFileDirectory[0] as String
+        var myDirectoryString = myFileDirectory[0] as String
+        // Add separator '/'
+        myDirectoryString = myDirectoryString.stringByAppendingString("/")
         
         // Add file name to path
         let myFilePosition = myDirectoryString.stringByAppendingString(MySportRecordFilename)
@@ -80,17 +87,20 @@ extension MySportDiaryDataRecord {
         if myFileManager.fileExistsAtPath(myFilePosition)
         {
             // file exists open it and read
-            let receivedSportData = NSKeyedUnarchiver.unarchiveObjectWithFile(myFilePosition) as! [MySportDiaryDataRecord]
+            let receivedSportData = NSKeyedUnarchiver.unarchiveObjectWithFile(myFilePosition) as? [MySportDiaryDataRecord]
             
-            // Restore record to global variable. Ensure that empty record is not copied
-            if receivedSportData.count > 0
+            if (receivedSportData != nil)
             {
-            mySportRecordsArray = receivedSportData
+                // Restore record to global variable.
+                
+                print("MySportDiaryDataRecordLoadAll: data records updated")
+                mySportRecordsArray = receivedSportData!
             }
             else
             {
                 print("MySportDiaryDataRecordLoadAll: No records")
             }
+            
         }
         else
         {
