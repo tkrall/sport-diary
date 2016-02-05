@@ -79,6 +79,14 @@ class MySportDiaryMainTableViewController: UITableViewController {
         deleteButton.tag = indexPath.row
         cell.addSubview(deleteButton)
         
+        // Add edit button to element
+        let editButton = UIButton(type: UIButtonType.Custom)
+        editButton.setTitle("Edit", forState: UIControlState.Normal)
+        editButton.setTitleColor(UIColor.greenColor(), forState: UIControlState.Normal)
+        editButton.frame = CGRectMake(450, 0, 50, 50)
+        editButton.addTarget(self, action: "MySportDiaryEditAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        editButton.tag = indexPath.row
+        cell.addSubview(editButton)
         return cell
     }
 
@@ -103,6 +111,12 @@ class MySportDiaryMainTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
 
+    }
+    
+    func MySportDiaryEditAction(sender:UIButton!)
+    {
+        let buttonRow = sender.tag
+        print("MySportDiaryEditAction: button in row pressed", buttonRow)
     }
     
     /*
