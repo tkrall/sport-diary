@@ -70,6 +70,14 @@ class MySportDiaryMainTableViewController: UITableViewController {
         label2.text = mySportRecordsArray[(indexPath.row)].mySportDiarySport
         cell.addSubview(label2)
         
+        // Add delete button to element
+        let deleteButton = UIButton(type: UIButtonType.Custom)
+        deleteButton.setTitle("Del", forState: UIControlState.Normal)
+        deleteButton.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+        deleteButton.frame = CGRectMake(400, 0, 50, 50)
+        deleteButton.addTarget(self, action: "MySportDiaryDelAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        deleteButton.tag = indexPath.row
+        cell.addSubview(deleteButton)
         
         return cell
     }
@@ -77,6 +85,24 @@ class MySportDiaryMainTableViewController: UITableViewController {
 
     override func tableView(tableView: (UITableView!), heightForHeaderInSection section: Int) -> CGFloat {
         return 35
+    }
+    
+    func MySportDiaryDelAction(sender:UIButton!)
+    {
+        let buttonRow = sender.tag
+        print("MySportDiaryDelAction: button in row pressed", buttonRow)
+        
+        // Remove correct element from local store
+        mySportRecordsArray.removeAtIndex(buttonRow)
+        
+        // Update data to file system
+        MySportDiaryDataRecord.MySportDiaryDataRecordSaveData(mySportRecordsArray)
+        
+        // Make sure that Table view elements are updated
+        dispatch_async(dispatch_get_main_queue()) {
+            self.tableView.reloadData()
+        }
+
     }
     
     /*
